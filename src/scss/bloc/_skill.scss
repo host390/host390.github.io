@@ -1,0 +1,294 @@
+
+
+.skill {
+
+    &__percent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        row-gap: 46px;
+        column-gap: 38px;
+        margin-bottom: 120px;
+    }
+
+    &__title {
+        text-align: center;
+        left: 0;
+        
+        &::before {  
+            content: '';
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #FFA501;
+            top: -7px;
+            transform: translateX(-50%);
+            left: 50%;
+            z-index: -1;
+            position: absolute; 
+        } 
+    }
+
+    &__subtitle {
+        margin-bottom: 60px;
+        text-align: center;
+        &::before {  
+            content: '';
+            transform: translateX(-50%);
+            left: 50%;
+        } 
+    }
+
+    &__body {
+        padding: 0px 10px;
+        display: grid;
+        grid-template-rows: repeat(2, 270px);
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: 270px;
+        gap: 13px;
+        margin-bottom: 120px;
+        &._active-show {
+            .skill__items {
+                transform: translate(0px, 0px) rotate(0deg) scale(1) skew(0deg, 0deg);
+            }
+        }
+    }
+
+    &__items {
+        border: 1px solid #000000;
+        padding: 30px 30px 25px 30px;
+
+        transform: translate(0px, 0px) rotate(0deg) scale(0) skew(0deg, 0deg);
+        transform-origin: center;
+        transition: all 0.5s ease 0s;
+    }
+}
+.container {
+}
+.subtitle {
+}
+.title {
+
+    &_fz16 {
+    }
+
+    &_fz36 {
+    }
+}
+.items-skillbox {
+
+    &__images {
+        margin-bottom: 20px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        img {
+            // height: 100%;
+            // object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: #000000;
+
+        height: 90px;
+        overflow: auto;
+    }
+}
+
+.skill {
+
+    &__percent {
+        &._active-show {
+            .skill__trak {
+                opacity: 1;
+                transform: translate(0px, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+            }
+        }
+    }
+
+    &__trak {
+        opacity: 0;
+        transform: translate(0px, 120%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+        transform-origin: center;
+        transition: all 0.5s ease 0s;
+    }
+}
+
+
+.trak-line {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        position: relative;
+        left: 10px;
+        margin-bottom: 20px; 
+        font-weight: 700;
+
+        padding-right: 40px;
+
+        &::before {
+            content: '';
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #FFA501;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -10px;
+            z-index: -1;
+            position: absolute;
+        }
+    }
+
+    &__perc {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__bg-line {
+        // width: 100%;
+        background: #E8E4DE;
+        border-radius: 4px;
+        height: 14px;
+        overflow: hidden;
+        position: relative;
+    }
+    &__color-line {
+        position: relative;
+        // width: 100%;
+        height: 100%;
+        background: #FFA501;
+
+        // animation-name: percent_anim;
+        animation-duration: 5s;
+        animation-timing-function: normal;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-delay: 0;
+    }
+    &__barrier {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background: #E8E4DE;
+    }
+
+}
+
+@keyframes percent_anim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+// .trak-line {
+
+//     &__top {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     &__title {
+//         position: relative;
+//         left: 10px;
+//         margin-bottom: 20px; 
+//         font-weight: 700;
+
+//         padding-right: 40px;
+
+//         &::before {
+//             content: '';
+//             width: 36px;
+//             height: 36px;
+//             border-radius: 50%;
+//             background-color: #FFA501;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             left: -10px;
+//             z-index: -1;
+//             position: absolute;
+//         }
+//     }
+
+//     &__perc {
+//         font-family: Poppins;
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 14px;
+//         line-height: 21px;
+        
+
+//     }
+
+//     &__bg-line {
+//         // width: 100%;
+//         background: #E8E4DE;
+//         border-radius: 4px;
+//         height: 14px;
+//         overflow: hidden;
+//         position: relative;
+//     }
+//     &__color-line {
+//         position: relative;
+//         // width: 100%;
+//         height: 100%;
+//         background: #FFA501;
+
+//         animation-name: percent_anim;
+//         animation-duration: 5s;
+//         animation-timing-function: normal;
+//         animation-iteration-count: 1;
+//         animation-direction: normal;
+//         animation-delay: 0;
+//     }
+//     &__barrier {
+//         position: absolute;
+//         height: 100%;
+//         right: 0;
+//         top: 0;
+//         width: 20%;
+//         background: #E8E4DE;
+//     }
+
+// }
+
+
+// @keyframes percent_anim {
+//     0% {
+//         width: 0%;
+//     }
+//     100% {
+//         width: 100%;
+//     }
+// }

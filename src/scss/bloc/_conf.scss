@@ -1,0 +1,37 @@
+
+
+.conf {
+    padding: 80px 0px;
+    &__h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 60px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    &__h2 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        color: #000000;
+    }
+    p {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+        margin-bottom: 20px;
+        span {
+            background: #FFA501;
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+
+
+
+
+.experience {
+    padding-bottom: 140px;
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 65px;
+        column-gap: 140px;
+        align-items: start;
+    }
+
+    &__column {
+        padding-left: 42px;
+        position: relative;
+        &::before {  
+            content: '';
+            width: 1px;
+            height: calc(100% - 16px);
+            // transform: rotate(90deg);
+            background-color: black;
+            position: absolute;
+            top: 16px;
+            left: 0;
+            // width: 100%;
+            
+        }
+    }
+
+    &__head {
+        margin-bottom: 40px;
+        position: relative;
+        font-weight: 700;
+
+
+        span {
+            display: inline-block;
+            opacity: 0;
+            transition: all 0.4s ease 0.2s;
+            transform: translate(0, 150%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+        }
+        
+        &._active-show {
+            span {
+                opacity: 1;
+                transform: translate(0, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+            }
+        }
+
+        &::before {  
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: #FFA501;
+            left: -49px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__row {
+        &._active-show {
+            .experience__skills {
+                opacity: 1;
+                transform: translate(0, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+            }
+        }
+    }
+
+    &__skills {
+        margin-bottom: 45px;
+        padding-left: 0;
+
+        opacity: 0;
+        
+        transform: translate(-110%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+        &:nth-child(1) {
+            transition: all 0.4s ease 0s;      
+        } 
+        &:nth-child(2) {
+            transition: all 0.4s ease .2s;      
+        } 
+
+        .skills__title {
+            padding-left: 60px;
+            margin-bottom: 0;
+            line-height: 21px;
+            margin-bottom: 5px;
+        }
+        .skills__subtitle {
+            padding-left: 60px;
+            margin-bottom: 10px;
+            line-height: 18px;
+        }
+        &::after {  
+            content: '';
+            width: 42px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: 18px;
+            left: -42px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.container {
+}
+
+.subtitle {
+}
+
+.title {
+
+    
+}
+
+.skills {
+
+    &__icon {
+    }
+
+    &__title {
+    }
+
+    &__subtitle {
+    }
+
+    &__text {
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

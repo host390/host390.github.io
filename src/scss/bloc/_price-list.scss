@@ -1,0 +1,113 @@
+
+
+
+.price-list {
+    padding-bottom: 120px;
+    &__title {
+
+    }
+
+    &__subtitle {
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        display: grid;
+        padding: 0px 50px;
+        grid-template:  repeat(3, minmax(45px, auto)) / repeat(2, 347px);
+        grid-auto-rows: minmax(45px, auto);
+        justify-content: space-between;
+
+        &._active-show {
+            .price-list__items {
+                transform: translate(0, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__items {
+        margin-bottom: 20px;
+        padding-left: 25px;
+        width: 100%;
+        
+
+        transition: all 0.5s ease 0s;
+        transform: translate(-100%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+        transform-origin: center;
+        opacity: 0;
+
+        @for $var from 1 to 7 {
+            $delay: $var * 0.2;
+            &:nth-child(#{$var}) {
+                @if $var==1 {
+                    transition: all 0.4s ease 0s;
+                } @else {
+                    transition: all 0.4s ease #{$delay + s};
+                }
+            }
+        } 
+        
+
+        // grid-template:  repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+
+
+.item-price {
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        position: relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+
+        width: 58%;
+
+        &::before {  
+            content: '';
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 0;
+            left: -35px;
+            background: #FFA501;
+        }   
+    }
+
+    &__price {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+
+        width: 42%;
+        text-align: right;
+    }
+
+    &__desc {
+        p {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+        
+    }
+}

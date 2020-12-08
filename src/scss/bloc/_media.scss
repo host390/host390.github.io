@@ -1,0 +1,549 @@
+
+
+@media (max-width: 1367px) {
+    .hi__mass-left {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) { // Для мониторов от 993 до 1200
+    .container, .hi__main-container {
+        max-width: 960px;
+    } 
+
+    .about {
+        padding: 100px 0px;
+        &__grid-column {
+            grid-template-columns: 400px 510px;
+            column-gap: 50px;
+        }
+        &__skill {
+            column-gap: 40px;
+        }
+    }
+
+    .subtitle {
+        &_center {
+            margin-bottom: 60px;
+        }
+    }
+    .experience {
+        padding-bottom: 100px;
+    }
+    .skill {
+        &__body {
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+        &__percent {
+            margin-bottom: 100px;
+            // width: 100%
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, 350px);
+        }
+    }
+    .portfolio {
+        // padding-bottom: 100px;
+        &__works {
+            grid-template-columns: repeat(4, 236px);
+            grid-template-rows: repeat(2, 236px);
+            grid-auto-rows: 236px;
+
+            justify-content: center;
+        }
+    }
+    .price-list {
+        padding-bottom: 100px;
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template: minmax(600px, auto)/400px 535px;
+        }
+        .form {
+            &__button {
+                min-width: 210px;
+                margin: 0px 28px 0px 0px;
+            }
+            &__grid-box {
+                margin-bottom: 29px;
+            }
+        }
+    }
+
+    .conf {
+        &__h1 {
+            font-size: 33px;
+            line-height: 40px;
+        }
+    }
+}
+
+@media (max-width: 992px) { // Для наутбуков от 769 до 992
+    .container, .hi__main-container {
+        max-width: 720px;
+    }
+    .title {
+        // margin-bottom: 12px;
+        &_fz36 {
+            font-size: 32px;
+        }
+    }
+    .inf-main {
+        &__title {
+            margin-bottom: 15px;
+        }
+    }
+    .inf-main__web {
+        line-height: 55px;
+        margin-bottom: 15px;
+    }
+    .about {
+        padding: 80px 0px;
+        &__grid-column {
+            grid-template-columns: 300px 385px;
+            column-gap: 35px;
+        }
+        &__skills-box {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+        }
+    }
+    .text-about__text {
+        margin-bottom: 35px;
+    }
+    .subtitle {
+        &_center {
+            margin-bottom: 50px;
+        }
+    }
+    .experience {
+        padding-bottom: 80px;
+        &__body {
+            padding: 0px 10px;
+            column-gap: 80px;
+        }
+    }
+    .skill {
+        &__body {
+            // grid-template-columns: repeat(3, 231px);
+            // justify-content: center;
+            margin-bottom: 80px;
+            // grid-template-rows: repeat(2, 266px);
+            // grid-auto-rows: 266px;
+        }
+        &__percent {
+            margin-bottom: 80px;
+        }
+    }
+    .portfolio {
+        // padding-bottom: 100px;
+        
+        &__works {
+            // grid-template-columns: repeat(auto-fit, 235px); ????? как так?
+            grid-template-columns: repeat(auto-fit, 235px);
+            grid-template-rows: repeat(2, 235px);
+            grid-auto-rows: 235px;
+            .goriz {
+                grid-row: unset;
+                grid-column: unset;
+            }
+            .vertic {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+        &__items {
+            &:nth-child(1), &:nth-child(4) {
+                transition: all 0.5s ease 0s;
+                transform: translate(-120%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 1;
+            } 
+            &:nth-child(2) {
+                transition: all 0.5s ease 0s;
+                transform: translate(0, -120%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            } 
+
+            &:nth-child(3),&:nth-child(6) {
+                transition: all 0.5s ease 0s;
+                transform: translate(120%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            &:nth-child(5) {
+                transition: all 0.5s ease 0s;
+                transform: translate(0, 120%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            }
+        }
+    }
+    .price-list {
+        padding-bottom: 80px;
+        &__wrapper {
+            grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 330px);
+            padding: 0;
+        }
+    }
+    .contacts {
+        padding-bottom: 80px;
+        &__wrapper {
+            padding: 0;
+            grid-template: minmax(600px, auto)/300px 385px;
+        }
+        .form {
+            &__button {
+                min-width: 220px;
+                margin: 0px 28px 23px 0px;
+            }
+            &__grid-box {
+                margin-bottom: 29px;
+            }
+            &__trig {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+    }
+
+    .conf {
+        padding: 80px 0px;
+    }
+}
+
+@media (max-width: 768px) { // Для планшетеов от 577 до 768
+    .container, .hi__main-container {
+        max-width: 540px;
+    }
+    .inf-main__web {
+        line-height: 43px;
+        margin-bottom: 13px;
+        font-size: 35px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .subtitle {
+        padding-bottom: 17px;
+        margin-bottom: 17px;
+    } 
+    .about {
+        padding: 60px 0px;
+        &__grid-column {
+            grid-template-columns: 1fr;
+            column-gap: 35px;
+            grid-template-rows: minmax(400px, auto);
+        }
+        &__poto {
+            margin-bottom: 40px;
+            grid-row: unset;
+        }
+        &__skills-box {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+        }
+    }
+    .subtitle {
+        &_center {
+            margin-bottom: 50px;
+        }
+    }
+    .experience {
+        padding-bottom: 60px;
+        &__body {
+            padding: 0px 10px;
+            column-gap: 80px;
+            grid-template-columns: 1fr;
+        }
+        &__column {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__skill {
+            margin-bottom: 30px;
+        }
+    }
+    .skill {
+        &__body {
+            // grid-template-columns: repeat(2, 270px);
+            // justify-content: center;
+            margin-bottom: 60px;
+            // grid-template-rows: repeat(2, 270px);
+            // grid-auto-rows: 270px;
+        }
+        &__percent {
+            margin-bottom: 60px;
+            // grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .portfolio {
+        // padding-bottom: 100px;
+        
+        &__works {
+            // grid-template-columns: repeat(auto-fit, 235px); ????? как так?
+            grid-template-columns: repeat(auto-fit, 262.5px);
+            grid-template-rows: repeat(2, 262.5px);
+            grid-auto-rows: 262.5px;
+        }
+        &__items {
+            &:nth-child(1), &:nth-child(2) {
+                transition: all 0.5s ease 0s;
+                transform: translate(0, -120%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 1;
+            } 
+
+            &:nth-child(3) {
+                transition: all 0.5s ease 0s;
+                transform: translate(-120%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            }
+            &:nth-child(4) {
+                transition: all 0.5s ease 0s;
+                transform: translate(120%, 0) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            &:nth-child(5),&:nth-child(6) {
+                transition: all 0.5s ease 0s;
+                transform: translate(0, 120%) rotate(0deg) scale(1, 1) skew(0deg, 0deg);
+                transform-origin: center;
+                opacity: 0;
+            }
+        }
+    }
+    .price-list {
+        padding-bottom: 60px;
+        &__wrapper {
+            grid-template: repeat(3, minmax(45px, auto)) / repeat(1, 280px);
+            justify-content: center;
+            padding: 0;
+        }
+        &__items {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .contacts {
+        padding-bottom: 60px;
+        &__wrapper {
+            padding: 0;
+            grid-template: auto/100%;
+            // justify-content: center;
+        }
+        .form {
+            &__button {
+                min-width: 210px;
+                margin: 0px 28px 0px 0px;
+            }
+            &__grid-box {
+                margin-bottom: 29px;
+            }
+            &__trig {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        &__poto {
+            display: none;
+        }
+    }
+
+    .conf {
+        padding: 60px 0px;
+    }
+}
+
+@media (max-width: 576px) { // Для телефонов от 320 до 576
+    .container, .hi__main-container {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .title {
+        margin-bottom: 15px;
+        &_fz36 {
+            font-size: 24px;
+        }
+    }
+    .inf-main__web {
+        margin-bottom: 25px;
+        font-size: 26px;
+        line-height: 39px;
+        max-width: 300px;
+    }
+    .menu__burger {
+        top: 15px;
+        right: 15px;
+    }
+    .menu__bar {
+        width: 250px;
+    }
+    .menu__list {
+        padding-top: 140px;
+    }
+    .menu__link {
+        padding-left: 55px;
+        &::before {  
+            content: '';
+            left: 20px;
+        } 
+    }
+    .ibg {
+        background-position: 55%;
+    }
+    .subtitle {
+        &_center {
+            margin-bottom: 40px;
+        }
+    }
+
+    .about {
+        padding: 30px 0px;
+        &__grid-column {
+            grid-template-columns: 1fr;
+            column-gap: 35px;
+            grid-template-rows: minmax(340px, auto);
+        }
+        &__poto {
+            margin-bottom: 40px;
+            grid-row: unset;
+        }
+        &__skills-box {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            grid-template-rows: auto;
+            grid-auto-rows: auto;
+            max-width: 260px;
+        }
+    }
+    .experience {
+        padding-bottom: 30px;
+        &__body {
+            padding: 0px 10px;
+            column-gap: 80px;
+            grid-template-columns: 1fr;
+        }
+        &__column {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__skill {
+            margin-bottom: 15px;
+        }
+    }
+    .skill {
+        &__body {
+            // grid-template-columns: repeat(1, 270px);
+            // justify-content: center;
+            margin-bottom: 40px;
+            // grid-template-rows: repeat(2, 270px);
+            // grid-auto-rows: 270px;
+            gap: 20px;
+        }
+        &__percent {
+            // max-width: 300px;
+            // margin: 0 auto 30px auto;
+            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, 300px);
+            // grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .portfolio {
+        // padding-bottom: 100px;
+        padding-bottom: 30px;
+        &__works {
+            // grid-template-columns: repeat(auto-fit, 235px); ????? как так?
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-template-rows: repeat(2, 280px);
+            grid-auto-rows: 280px;
+            gap: 20px;
+            &._active-show {
+                .portfolio__items {
+                    transform: scale(1, 1) !important;
+                    opacity: 1;
+                }
+            }
+        }
+        &__items {
+            transform: scale(0) !important;
+            transform-origin: center;
+            opacity: 0;
+        }
+    }
+    .price-list {
+        padding-bottom: 30px;
+    }
+    .contacts {
+        padding-bottom: 30px;
+        // width: 300px;
+        // margin: 0px auto 0px auto;
+        &__wrapper {
+            padding: 0;
+            grid-template: auto/100%;
+            // justify-content: center;
+        }
+        .form {
+            
+            &__button {
+                min-width: 210px;
+                margin: 0px 0px 0px 0px;
+            }
+            &__grid-box {
+                grid-template: 45px 45px 145px / auto;
+                margin-bottom: 20px;
+            }
+            &__trig {
+                flex-direction: column;
+                align-items: center;
+            }
+            &__button {
+                order: 2;
+                min-width: 220px;
+            }
+            &__konf {
+                order: 1;
+                margin-bottom: 20px;
+                // max-width: 180px;
+                // padding: 0px 10px;
+                @media (max-width: 360px) {
+                    width: 180px;
+                }
+                // text-align: center;
+                justify-content: center;
+            }
+            .myinput_ta {
+                grid-column: unset;
+            }
+        }
+        &__poto {
+            display: none;
+        }
+    }
+    .title {
+        margin-bottom: 18px;
+        
+    }
+
+    .conf {
+        padding: 30px 0px;
+        &__h1 {
+            font-size: 23px;
+            line-height: 32px;
+        }
+    }
+}
+
